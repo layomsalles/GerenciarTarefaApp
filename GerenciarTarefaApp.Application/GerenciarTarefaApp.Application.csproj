@@ -13,4 +13,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GerenciarTarefaApp.Infra.Data\GerenciarTarefaApp.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>

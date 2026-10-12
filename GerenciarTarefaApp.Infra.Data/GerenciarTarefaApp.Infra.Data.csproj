@@ -19,4 +19,15 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contexts\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Migration\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GerenciarTarefaApp.Domain\GerenciarTarefaApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
