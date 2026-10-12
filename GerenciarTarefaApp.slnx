@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/Application/">
+    <Project Path="GerenciarTarefaApp.Application/GerenciarTarefaApp.Application.csproj" />
+  </Folder>
+  <Folder Name="/docker/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="GerenciarTarefaApp.Domain/GerenciarTarefaApp.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="GerenciarTarefaApp.Infra.Data/GerenciarTarefaApp.Infra.Data.csproj" />
+  </Folder>
+  <Folder Name="/Tests/" />
+  <Project Path="GerenciarTarefaApp.Api/GerenciarTarefaApp.Api.csproj" />
+</Solution>
