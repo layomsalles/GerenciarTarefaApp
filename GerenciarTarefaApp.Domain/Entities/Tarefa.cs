@@ -11,28 +11,39 @@ namespace GerenciarTarefaApp.Domain.Entities
         public DateTime? DataConclusao { get; private set; }
         public TarefaEnum Status { get; private set; }
 
-        public void CriarTarefa(Guid id, string titulo, string descricao, DateTime dataCriacao, DateTime? dataConclusao, TarefaEnum status) 
+        public void CriarTarefa(string titulo, string descricao) 
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Titulo = titulo;
             Descricao = descricao;
-            DataCriacao = dataCriacao;
-            DataConclusao = dataConclusao;
-            Status = status;
+            DataCriacao = DateTime.Now;
         }
 
-        public void AtualizarTarefa(string titulo, string descricao, DateTime dataCriacao, DateTime? dataConclusao, TarefaEnum status) 
+        public void AtualizarTarefa(string? titulo = null, string? descricao = null, TarefaEnum? status = null) 
         {
             Titulo = titulo;
             Descricao = descricao;
-            DataCriacao = dataCriacao;
-            DataConclusao = dataConclusao;
-            Status = status;
-        }
 
-        public void AtualizarStatus(TarefaEnum status)
-        {
-            Status = status;
+            if (!string.IsNullOrWhiteSpace(titulo))
+            {
+                Titulo = titulo;
+            }
+
+            if (!string.IsNullOrWhiteSpace(descricao))
+            {
+                Descricao = descricao;
+            }
+
+            if(status.HasValue)
+            {
+                Status = status.Value;
+
+                if(status.Value == TarefaEnum.Concluida)
+                {
+                    DataConclusao = DateTime.Now;
+                }
+            }
+
         }
     }
 }
