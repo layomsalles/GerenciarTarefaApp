@@ -1,7 +1,7 @@
 ﻿using GerenciarTarefaApp.Application.Dtos.Request;
 using GerenciarTarefaApp.Application.Dtos.Response;
 
-namespace GerenciarTarefaApp.Application.Services
+namespace GerenciarTarefaApp.Application.Interfaces
 {
     public interface ITarefaService
     {
