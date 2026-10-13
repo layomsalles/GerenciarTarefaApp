@@ -11,6 +11,8 @@
   <Folder Name="/Infrastructure/">
     <Project Path="GerenciarTarefaApp.Infra.Data/GerenciarTarefaApp.Infra.Data.csproj" />
   </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="GerenciarTarefaApp.Api/GerenciarTarefaApp.Api.csproj" />
+  </Folder>
   <Folder Name="/Tests/" />
-  <Project Path="GerenciarTarefaApp.Api/GerenciarTarefaApp.Api.csproj" />
 </Solution>
