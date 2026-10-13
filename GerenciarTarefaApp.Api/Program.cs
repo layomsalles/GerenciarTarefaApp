@@ -1,4 +1,8 @@
+using GerenciarTarefaApp.Application.Interfaces;
+using GerenciarTarefaApp.Application.Services;
+using GerenciarTarefaApp.Domain.Interfaces;
 using GerenciarTarefaApp.Infra.Data.Contexts;
+using GerenciarTarefaApp.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -19,6 +23,9 @@ builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
+builder.Services.AddScoped<ITarefaService, TarefaService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

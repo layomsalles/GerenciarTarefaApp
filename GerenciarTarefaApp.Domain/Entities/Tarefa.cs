@@ -21,9 +21,6 @@ namespace GerenciarTarefaApp.Domain.Entities
 
         public void AtualizarTarefa(string? titulo = null, string? descricao = null, TarefaEnum? status = null) 
         {
-            Titulo = titulo;
-            Descricao = descricao;
-
             if (!string.IsNullOrWhiteSpace(titulo))
             {
                 Titulo = titulo;
