@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GerenciarTarefaApp.Application\GerenciarTarefaApp.Application.csproj" />
   </ItemGroup>
 

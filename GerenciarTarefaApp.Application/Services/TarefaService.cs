@@ -23,7 +23,6 @@ namespace GerenciarTarefaApp.Application.Services
 
             return new TarefaResponse
             (
-                "Tarefa deletada com sucesso",
                 tarefaExiste.Id,
                 tarefaExiste.Titulo,
                 tarefaExiste.Descricao,
@@ -43,7 +42,6 @@ namespace GerenciarTarefaApp.Application.Services
 
             return new TarefaResponse
             (
-                "Tarefa deletada com sucesso",
                 tarefa.Id,
                 tarefa.Titulo,
                 tarefa.Descricao,
@@ -62,9 +60,10 @@ namespace GerenciarTarefaApp.Application.Services
                 throw new ApplicationException("Tarefa não encontrada");
             }
 
+            _tarefaRepository.DeletarTarefa(id);
+
             return new TarefaResponse
             (
-                "Tarefa deletada com sucesso",
                 tarefa.Id,
                 tarefa.Titulo,
                 tarefa.Descricao,
@@ -80,7 +79,6 @@ namespace GerenciarTarefaApp.Application.Services
 
             return tarefas.Select(tarefa => new TarefaResponse
             (
-               "Tarefa deletada com sucesso",
                 tarefa.Id,
                 tarefa.Titulo,
                 tarefa.Descricao,
@@ -101,7 +99,6 @@ namespace GerenciarTarefaApp.Application.Services
 
             return new TarefaResponse
             (
-                "Tarefa deletada com sucesso",
                 tarefa.Id,
                 tarefa.Titulo,
                 tarefa.Descricao,
